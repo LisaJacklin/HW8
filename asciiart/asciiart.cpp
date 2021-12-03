@@ -36,8 +36,13 @@ int main()
 }
 
 class ppm {
+public:
+    void open(std::string);
+    void toASCII();
+
 
     cout << "Program to convert a ppm to ascii art" << endl;
+
 
     // open the file
     string infile = "parrot.ppm";
