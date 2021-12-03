@@ -7,8 +7,6 @@
 //original code came from:
 // book-db.cpp 
 
-
-
 #include <iostream>
 #include <vector>
 
