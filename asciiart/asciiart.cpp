@@ -41,17 +41,21 @@ public:
     void toASCII();
 
 
-    cout << "Program to convert a ppm to ascii art" << endl;
+    void ppm::open(std::string) {
+
+        cout << "Program to convert a ppm to ascii art" << endl;
 
 
-    // open the file
-    string infile = "parrot.ppm";
-    ifstream fin(infile);
-    if (!fin) {
-        cout << "Error opening " << infile << endl;
-        exit(1);
+        // open the file
+        string infile = "parrot.ppm";
+        ifstream fin(infile);
+        if (!fin) {
+            cout << "Error opening " << infile << endl;
+            exit(1);
+        }
+        else { cout << "Opened " << infile << endl; }
+
     }
-    else { cout << "Opened " << infile << endl; }
 
     // read the magic number
     string line;
