@@ -39,7 +39,6 @@ int main()
     minVal(s5);
 }
 
-
 //return all min, max, mean and meadian values using a struct.
 
 void maxVal (std::vector <int> & num) {
