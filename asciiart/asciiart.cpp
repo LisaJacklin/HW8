@@ -37,9 +37,6 @@ int main()
 
 class ppm {
 public:
-    void open(std::string);
-    void toASCII();
-
 
     void ppm::open(std::string) {
 
@@ -69,6 +66,21 @@ public:
             exit(2);
         }
 
+        // quick and dirty - process comment
+        getline(fin, line);
+        if (line[0] == '#') {
+            cout << "Ignoring comment" << endl;
+        }
+
+        // this won't handle comments
+        int xres, yres, maxval;
+        fin >> xres >> yres >> maxval;
+        if (!fin) {
+            cout << "Error reading stream" << endl;
+            exit(3);
+        }
+        cout << "Image size: " << xres << " x " << yres << endl;
+        cout << "Maxval = " << maxval << endl;
 
         // loop for xres * yres iterations
         int r, g, b, iy;
@@ -101,5 +113,5 @@ public:
         cout << "Program finished" << endl;
 
     }
-   
+    
 };
