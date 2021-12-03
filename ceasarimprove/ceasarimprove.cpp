@@ -7,6 +7,7 @@
 
 
 #include <iostream>
+
 char encrypt(char message[1000], int key);
 
 int main()
