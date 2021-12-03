@@ -31,6 +31,12 @@ using std::ifstream;
 
 int main()
 {
+    RGBImage ppm("parrot.ppm");
+    ppm.toASCII();
+}
+
+class ppm {
+
     cout << "Program to convert a ppm to ascii art" << endl;
 
     // open the file
@@ -98,4 +104,5 @@ int main()
     }
 
     cout << "Program finished" << endl;
-}
+
+};
